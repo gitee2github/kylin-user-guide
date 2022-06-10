@@ -1,0 +1,29 @@
+kylin-user-guide (1.0.4-1) focal; urgency=medium
+
+  * New upstream releasei.
+
+ -- Allen <zouchang@kylinos.cn>  Thu, 04 Nov 2021 20:02:31 +0800
+
+kylin-user-guide (1.0.3-1~1019-1) unstable; urgency=medium
+
+  * Bug  : 
+     - bug#87068 【用户手册】点击应用模块下拉按钮后，显示为空
+  * Task : 
+  * Other: 
+
+ -- jiahua xie <xiejiahua@kylinos.cn>  Mon, 01 Nov 2021 21:00:51 +0800
+
+kylin-user-guide (1.0.3-1~1019) unstable; urgency=medium
+
+  * Bug  : 
+  * Task : 
+  * Other: 
+     - Incorporate master modification, cut some modules
+
+ -- jiahua xie <xiejiahua@kylinos.cn>  Tue, 19 Oct 2021 15:51:14 +0800
+
+kylin-user-guide (1.0.3-1~0806) unstable; urgency=medium
+
+  * Initial release. (Closes: 968175)
+
+ -- handsome_feng <jianfengli@ubuntukylin.com>  Fri, 06 Aug 2021 20:36:38 +0800
