@@ -78,16 +78,25 @@ static void crashHandler(int sig)
 }
 
 QString getAppVersion(){
+    QString m_appVersion;
+    QStringList options;
     QProcess process;
-    QString cmd = "dpkg-parsechangelog";
-    QStringList arg;
-    arg.clear();
-    arg << "-l" << CHANGELOG_PATH << "--show-field" << "Version";
-    process.start(cmd,arg);
+    options << "-qa" << "|" << "grep" << "kylin-user-guide";
+    process.start("rpm", options);
     process.waitForFinished();
-    QByteArray result = process.readAllStandardOutput();
-    result = result.left(result.length()-1);
-    return result;
+    QString dpkgInfo = process.readAll();
+    QStringList infoList = dpkgInfo.split("\n");
+    for (int n = 0; n < infoList.size(); n++) {
+        QString strInfoLine = infoList[n];
+        if (strInfoLine.contains("kylin-user-guide")) {
+    	    QStringList lineInfoList = strInfoLine.split(QRegExp("-"));
+    	    if (lineInfoList.size() >= 3) {
+    	        m_appVersion = lineInfoList[3];
+       	    }
+    	    break;
+        }
+    }
+    return m_appVersion;
 }
 
 int main(int argc, char *argv[])
