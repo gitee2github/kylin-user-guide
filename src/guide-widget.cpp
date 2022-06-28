@@ -30,9 +30,9 @@
 #include <QList>
 #include <QSysInfo>
 #include <QX11Info>
+#include "guide-widget.h"
 #include <X11/Xlib.h>
 
-#include "guide-widget.h"
 #include "common-tool/comm_func.h"
 #include "xatom-helper.h"
 
